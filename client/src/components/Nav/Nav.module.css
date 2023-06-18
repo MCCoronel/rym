@@ -1,0 +1,118 @@
+.navBar {
+  background: #07c0eeb7;
+  background: linear-gradient(0deg, #d19111c4 40%, #d13b11d4 80%);
+  background: -webkit-linear-gradient(0deg, #d19111b7 40%, #d13b11a6 80%);
+  background: -moz-linear-gradient(0deg, #d19111b2 40%, #d13b11b4 80%);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  position: center;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 15%;
+  box-shadow: -2px 0px 51px 1px rgba(249, 77, 10, 0.75);
+  -webkit-box-shadow: -2px 0px 51px 1px rgba(249, 77, 10, 0.75);
+  -moz-box-shadow: -2px 0px 51px 1px rgba(249, 77, 10, 0.75);
+  z-index: 100;
+}
+
+.conteinerButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteinerButtons2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: right;
+  margin-top: 3px;
+}
+
+.characters {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  margin-top: 20px;
+}
+
+.imageContainer {
+  margin-top: -2%;
+}
+
+.image {
+  width: 60%; /* Establece un ancho del 50% del contenedor padre */
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener las proporciones originales */
+}
+
+@font-face {
+  font-family: "sui generis";
+  src: url(../../assets/sui\ generis\ rg.ttf);
+}
+
+.containerIntruction {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.h3 {
+  font-family: "sui generis";
+  font-size: 15px;
+  text-shadow: 1px -1px 21px rgba(194, 228, 22, 0.98);
+}
+
+.h3:hover {
+  text-shadow: 1px -1px 21px rgb(3, 245, 27);
+}
+
+.logo {
+  width: 30%; /* Establece un ancho del 50% del contenedor padre */
+
+  margin-bottom: -1em;
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener las proporciones originales */
+}
+
+.button {
+  font-family: "sui generis";
+  margin-right: 20px;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  background-color: rgb(21, 189, 189);
+  z-index: 1;
+}
+.button:hover:after {
+  width: 100%;
+  left: 0;
+}
+.button:after {
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #80ed99;
+  right: 0;
+}
+.button:active {
+  top: 2px;
+}

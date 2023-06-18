@@ -1,0 +1,33 @@
+.error{
+    max-width: 100%; /* ajusta el ancho según tus necesidades */
+  height: auto; /* ajusta la altura según tus necesidades */
+  object-fit: cover; /* ajusta la forma en que la imagen se adapta al tamaño especificado */
+  position: relative; /* Añadido para posicionar correctamente el botón */
+}
+
+.buttonLogIn{
+    margin-right: 20px;    
+    min-width: 20%;
+    height: 60px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+     background-color: rgb(214, 97, 2);
+   z-index: 1;
+
+   /*Para posicionar el boton dentro de la imagen*/
+
+   position: absolute; /* Cambiado a absolute */
+   bottom: 85%; /* Ajusta la distancia desde la parte inferior de la imagen */
+   left: 50%; /* Ajusta la posición horizontal del botón */
+   transform: translateX(-50%); /* Centra el botón horizontalmente */
+}

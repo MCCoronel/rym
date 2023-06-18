@@ -1,0 +1,10 @@
+.CardsContainer{
+    max-width: 75%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    background-color: rgba(10, 225, 233, 0.349);
+}

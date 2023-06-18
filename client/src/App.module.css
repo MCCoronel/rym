@@ -1,0 +1,9 @@
+.BarraAgregar{
+    background-color: rgba(128, 255, 0, 0.498);
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+    margin-bottom: 1em;
+
+}

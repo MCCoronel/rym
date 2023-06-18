@@ -1,0 +1,204 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f7f852;
+  background: linear-gradient(0deg, #f3f7fa5e 30%, #f2f4f573 80%);
+  background: -webkit-linear-gradient(0deg, #f0f4f749 30%, #eef0f196 80%);
+  background: -moz-linear-gradient(0deg, #f7f8f859 30%, #f5f7f84d 80%);
+
+  width: auto;
+  border: 3px solid rgb(250, 239, 250);
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  animation: aparecer 0.5s;
+  position: relative;
+}
+
+@keyframes aparecer {
+  from {
+    transform: translate(700px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.cardContainer:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.07);
+}
+
+.imageContainer {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 0;
+
+  border-radius: 20px;
+  background: linear-gradient(145deg, #43ebee, #39c6c8);
+  box-shadow: 5px 5px 5px #3a3c3c, -2px -2px 9px #058383;
+}
+
+.imagen {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 30px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  background: #05f0f0;
+  box-shadow: inset -6px -6px 32px #04a8a8, inset 6px 6px 32px #07ffff,
+    inset 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.imagen:hover {
+  filter: saturate(180%);
+}
+
+.statusContainer {
+  position: absolute;
+  top: 10%; /* Ajusta la distancia superior según sea necesario */
+  right: 0px; /* Ajusta la distancia derecha según sea necesario */
+  /*left:1px;*/
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head {
+  position: absolute;
+  top: 70%; /* Ajusta la distancia superior según sea necesario */
+ 
+  /*left:1px;*/
+  bottom: 1%;
+  
+
+  width: 100%;
+ 
+}
+
+.name {
+  color: white;
+  font-family: "sui generis";
+  font-size: 110%;
+  background-color: rgba(0, 238, 255, 0.571);
+  box-shadow: 0px -69px 25px -4px rgba(0,0,0,0.35) recuadro;
+  -webkit-box-shadow: 0px -69px 25px -4px rgba(0,0,0,0.35) recuadro;
+  -moz-box-shadow: 0px -69px 25px -4px rgba(0,0,0,0.35) recuadro;
+  
+}
+.statusDead {
+  background-color: rgba(255, 0, 0, 0.808);
+  display: inline-block;
+  padding: 2px;
+  margin-top: 2px;
+  font-family: "sui generis";
+  font-size: medium;
+}
+
+.statusDead:hover {
+  box-shadow: -3px 1px 32px 0px rgba(239, 217, 217, 1);
+  -webkit-caja-sombra: -3px 1px 32px 0px rgba(239, 217, 217, 1);
+  -moz-box-shadow: -3px 1px 32px 0px rgba(239, 217, 217, 1);
+}
+
+.statusAlive {
+  background-color: rgba(3, 248, 3, 0.897);
+  display: inline-block;
+  padding: 1px;
+  margin-top: 5px;
+  font-family: "sui generis";
+  font-size: medium;
+}
+
+.statusAlive:hover {
+  box-shadow: -3px 1px 32px 0px rgba(239, 217, 217, 1);
+  -webkit-caja-sombra: -3px 1px 32px 0px rgba(239, 217, 217, 1);
+  -moz-box-shadow: -3px 1px 32px 0px rgba(239, 217, 217, 1);
+}
+
+.statusUnknown {
+  background-color: rgba(243, 247, 8, 0.87);
+  display: inline-block;
+  padding: 1px;
+  margin-top: 5px;
+  font-family: "sui generis";
+  font-size: medium;
+}
+
+.statusUnknown:hover {
+  box-shadow: -3px 1px 32px 0px rgba(239, 217, 217, 1);
+  -webkit-caja-sombra: -3px 1px 32px 0px rgba(239, 217, 217, 1);
+  -moz-box-shadow: -3px 1px 32px 0px rgba(239, 217, 217, 1);
+}
+
+@font-face {
+  font-family: "sui generis";
+  src: url(../../assets/sui\ generis\ rg.ttf);
+}
+.description {
+  font-size: x-small;
+  line-height: 1.3em;
+  font-family: monospace;
+  font-family: "sui generis";
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+}
+
+.closebutton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+.close {
+  color: rgba(48, 46, 46, 0.719);
+  font-size: 50px;
+}
+
+.close:hover {
+  color: rgba(243, 6, 6, 0.87);
+}
+
+.detailButton {
+  color: rgba(48, 46, 46, 0.719);
+  font-size: 50px;
+  margin-right: 0.5em;
+}
+
+.detailButton:hover {
+  color: rgb(247, 133, 3);
+}
+
+.heartButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.heart1 {
+  color: rgb(44, 248, 25);
+  font-size: 50px;
+}
+
+.heart2 {
+  color: rgba(48, 46, 46, 0.719);
+  font-size: 50px;
+}
+
+.heart2:hover {
+  color: #02720489;
+}

@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "sui generis";
+  src: url(../../assets/sui\ generis\ rg.ttf);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3%;
+  width: 50%;
+  height: 60%;
+  background: #0cc2cf95;
+  /* background: linear-gradient(0deg,#043c61 30%, #11a2f6 80%);
+    background: -webkit-linear-gradient(0deg,#043c61 30%, #11a2f6 80%);
+    background: -moz-linear-gradient(0deg,#043c61 30%, #11a2f6 80%); */
+
+  border-radius: 20px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+
+  box-shadow: 10px 10px 0px -2px rgba(241, 236, 236, 0.701);
+  -webkit-caja-sombra: 10px 10px 0px -2px rgba(245, 240, 240, 0.59);
+  -moz-caja-sombra: 10px 10px 0px -2px rgba(247, 239, 239, 0.59);
+
+  padding-left: 1em;
+  padding-right: 1em;
+  transition: all 400ms ease;  /*Esta línea establece una transición animada para todas las propiedades CSS. El efecto de transición tendrá una duración de 400 milisegundos y se aplicará una función de temporización "ease" (suave) para suavizar la animación.*/
+  animation: subir 2s infinite alternate ease-in-out; /*Esta línea establece una animación llamada "subir" que se aplicará al elemento. La animación tiene una duración de 2 segundos. La palabra clave "infinite" indica que la animación se repetirá infinitamente. La palabra clave "alternate" especifica que la animación se invertirá en cada ciclo, es decir, el elemento se moverá hacia arriba y luego hacia abajo. La función de temporización "ease-in-out" se utiliza para suavizar la aceleración y desaceleración de la animación*/
+}
+
+@keyframes subir {
+  0%{
+      transform: translateY(5px);
+  }
+  100%{
+      transform: translateY(-5px);
+  }
+}
+
+.name {
+  font-family: "sui generis";
+  font-size: 300%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  /*z-index: -1;*/
+
+  margin-bottom: 5%;
+}
+
+.imageContainer {
+  display: inline-block;
+  border: 5px solid rgb(247, 215, 247);
+  border-radius: 500px;
+  
+}
+
+.imagen {
+  display: block;
+  width: fit-content;
+  height: auto;
+  border-radius: 300px;
+}
+
+.atributes {
+  text-align: left;
+  font-family: "sui generis";
+  font-size: larger;
+  font-style: oblique;
+  margin-left: -1em;
+  margin-top: 1em;
+}
