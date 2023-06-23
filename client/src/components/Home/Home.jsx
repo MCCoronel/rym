@@ -2,8 +2,13 @@
 import style from "./Home.module.css";
 import video from "../../assets/Rick Sanchez comp for editing.mp4";
 import { Link } from 'react-router-dom';
-import image from '../../assets/Rick-And-Morty-Background-PNG.png';
-// import image from '../../assets/cardd.jpg';
+import imgSection1 from "../../assets/section1.jpeg";
+import imgSection2 from "../../assets/section21.webp";
+import imgSection3 from "../../assets/section31.jpg";
+import imgSection4 from "../../assets/section41.jpg";
+import imgSection5 from "../../assets/section51.png";
+import imgFooter from "../../assets/Rick-And-Morty-Background-PNG.png"
+
 
 
 
@@ -11,39 +16,38 @@ const Home = () => {
     return (
         <div className={style.Home}>
 
-            <div className={style.ContainerHome}>
+            <div className={style.flexColumn}>
+                <div className={style.ContainerHome}>
 
+                    <div className={style.ContainerIntro}>
+                        <div>
+                            <h5 className={style.cardGame}>CARD GAME</h5>
+                        </div>
 
-                <div className={style.ContainerIntro}>
+                        <div>
+                            <p className={style.intro}>
+                                Muy bien, Morty, déjame explicarte cómo funcionaría ese juego de
+                                cartas que has imaginado. Prepárate para una aventura
+                                interdimensional de estrategia y diversión. En este juego,
+                                llamémoslo "Interdimensional Clash", los jugadores tendrán la
+                                oportunidad de elegir sus personajes favoritos de una selección de
+                                826 opciones. Estos personajes podrían ser desde superhéroes y
+                                villanos hasta criaturas mágicas y seres de otros mundos. ¡Las
+                                posibilidades son infinitas, Morty!
+                            </p>
+                        </div>
 
-                    <div>
-                        <h5 className={style.cardGame}>CARD GAME</h5>
-                    </div>
-
-                    <div>
-                        <p className={style.intro}>
-                            Muy bien, Morty, déjame explicarte cómo funcionaría ese juego de
-                            cartas que has imaginado. Prepárate para una aventura
-                            interdimensional de estrategia y diversión. En este juego,
-                            llamémoslo "Interdimensional Clash", los jugadores tendrán la
-                            oportunidad de elegir sus personajes favoritos de una selección de
-                            826 opciones. Estos personajes podrían ser desde superhéroes y
-                            villanos hasta criaturas mágicas y seres de otros mundos. ¡Las
-                            posibilidades son infinitas, Morty!
-                        </p>
-                    </div>
-
-                    {/* <Link to='/characters'>
+                        {/* <Link to='/characters'>
                             <img src={image} alt="" className={style.imagen} />
                         </Link> */}
 
-                </div>
+                    </div>
 
-               
-                <div className={style.cardContainer}>
-                    
-                    
-                        <div className={style.ContainerVideo}>
+
+                    <div className={style.cardContainer}>
+
+
+                        {/* <div className={style.ContainerVideo}>
                         <video
                             src={video}
                             autoPlay
@@ -54,11 +58,37 @@ const Home = () => {
                         ></video>
                   
                        
+                    </div> */}
+
+                        <section className={style.section}>
+
+                            <img src={imgSection1} alt='img' className={style.imgSection} />
+                            <img src={imgSection2} alt='img' className={style.imgSection} />
+                            <img src={imgSection3} alt='img' className={style.imgSection} />
+                            <img src={imgSection4} alt='img' className={style.imgSection} />
+                            <img src={imgSection5} alt='img' className={style.imgSection} />
+
+                        </section>
+
                     </div>
 
+
+
+                </div>
+                <Link to="/characters">
+                <button data-text="Awesome" className={style.button}>
+                    <span className={style.actualText}>&nbsp;PLAY&nbsp;</span>
+                    <span className={style.hoverText} aria-hidden="true">&nbsp;PLAY&nbsp;</span>
+                </button>
+                </Link>
+                <div className={style.footer}>
+                    <span className={style.span}>
+                        <img src={imgFooter} alt='imgFooter' className={style.imgFooter} />
+                        <p>© 2023 MCCoronel. Todos los derechos reservados.</p>
+                    </span>
                 </div>
 
-           
+
             </div>
         </div>
     );

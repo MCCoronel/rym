@@ -5,18 +5,20 @@ import style from "./App.module.css";
 import Nav from "./components/Nav/Nav";
 import { useState } from "react";
 import axios from "axios";
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate, useParams } from "react-router-dom";
 import Detail from "./components/Detail/Detail";
 import AboutMe from "./components/About/AboutMe";
 import Favorites from "./components/Favorites/Favorites";
 import Login from "./components/Login/Login";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
-
+import NavHome from "./components/NavHome/NavHome";
+import NavDetail from "./components/NavDetail/NavDetil";
+import NavAbout from "./components/NavAbout/NavAbout";
 
 function App() {
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
- // const EMAIL = "credential@gmail.com";
+  // const EMAIL = "credential@gmail.com";
   //const PASSWORD = "credential2";
   const [characters, setCharacters] = useState([]);
 
@@ -41,16 +43,20 @@ function App() {
   //   }
   // };
 
-  const login = (userData) => {
-    const { email, password } = userData;
-    const URL = 'http://localhost:3001/rickandmorty/login';
-    axios(URL + `?email=${email}&password=${password}`)
-    .then(({ data }) => {
+  const login = async (userData) => {
+    try {
+      const { email, password } = userData;
+      const URL = "http://localhost:3001/rickandmorty/login";
+      const { data } = await axios(
+        URL + `?email=${email}&password=${password}`
+      );
       const { access } = data;
       setAccess(access);
-      access && navigate('/home');
-    });
-  }
+      access && navigate("/home");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   //el array de dependencia simula el UpDATE, que en este caso tiene q estar pendiente de access, si access no es true, no me va a llevar a otra ruta que no sea "/",si es true me va a llevar a home y me va a renderizar el resto de los componentes
 
@@ -83,30 +89,25 @@ function App() {
   //     });
   // }
 
-  function onSearch(id) {
-    axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then(({ data }) => {
-        if (data.name) {
-          const characterExists = characters.some(
-            (character) => character.id === data.id
-          );
-          if (characterExists) {
-            window.alert("¡Este personaje ya está en pantalla!");
-          } else {
-            setCharacters((oldChars) => [...oldChars, data]);
-          }
+  async function onSearch(id) {
+    try {
+      const { data } = await axios(
+        `http://localhost:3001/rickandmorty/character/${id}`
+      );
+
+      if (data.name) {
+        const characterExists = characters.some(
+          (character) => character.id === data.id
+        );
+        if (characterExists) {
+          window.alert("¡Este personaje ya está en pantalla!");
         } else {
-          window.alert("¡No hay personajes con este ID!");
+          setCharacters((oldChars) => [...oldChars, data]);
         }
-      })
-      .catch((error) => {
-        if (error.response && error.response.status === 404) {
-          console.log(error.response);
-          window.alert("¡Solo hay 826 personajes!");
-        } else {
-          window.alert("¡Ocurrió un error al buscar el personaje!");
-        }
-      });
+      }
+    } catch (error) {
+      window.alert("¡No hay personajes con este ID!");
+    }
   }
 
   // el catch captura cualquier error con la solicitud a axios
@@ -117,21 +118,24 @@ function App() {
     );
     setCharacters(FilteredCharacter);
   };
-  
+
   //En el código actualizado, se utiliza el gancho useLocation de react-router-dom para obtener la ubicación actual. Luego, se utiliza location.pathname para determinar si la barra de navegación debe mostrarse o no. Si la ubicación es diferente a '/', se muestra la barra de navegación (<Nav />).
 
   //De esta manera, la barra de navegación se mostrará en todas las rutas excepto en la ruta de inicio de sesión ('/').
 
+  const{id}= useParams();
+  console.log(id);
   const location = useLocation();
-  const showNav = location.pathname !== "/";
+  const showNav = location.pathname !== "/" && location.pathname !== "/home" && location.pathname !== "/about" && location.pathname !== `/detail/${id}`;
+  const showNavHome = location.pathname === "/home"
+  const showNavDetail = location.pathname === `/detail/${id}`;
+  console.log(location.pathname);
+  const showNavAbout = location.pathname === "/about";
 
   //Pasé la función login como una prop llamada login al componente Login en la ruta "/". Esto permitirá que el componente Login llame a la función login cuando el usuario intente iniciar sesión.
 
-
-
   return (
     <div className="App">
-
       {!access ? (
         <>
           <Routes>
@@ -140,12 +144,32 @@ function App() {
           </Routes>
         </>
       ) : (
-
         <>
           {showNav && (
             <Nav
               className={style.BarraAgregar}
               onSearch={onSearch}
+              setAccess={setAccess}
+            />
+          )}
+
+          {showNavHome && (
+            <NavHome
+              className={style.BarraAgregar}
+              setAccess={setAccess}
+            />
+          )}
+
+{showNavDetail && (
+            <NavDetail
+              className={style.BarraAgregar}
+              setAccess={setAccess}
+            />
+          )}
+
+{showNavAbout && (
+            <NavAbout
+              className={style.BarraAgregar}
               setAccess={setAccess}
             />
           )}

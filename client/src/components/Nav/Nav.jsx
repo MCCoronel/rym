@@ -5,6 +5,10 @@ import logo from "../../assets/Rick_and_Morty.svg.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faRightFromBracket
+} from "@fortawesome/free-solid-svg-icons";
 
 const Nav = ({ onSearch, setAccess }) => {
   const [characters, setCharacters] = useState([]);
@@ -70,8 +74,8 @@ const Nav = ({ onSearch, setAccess }) => {
     <nav className={style.navBar}>
       <div className={style.conteinerButtons}>
         <div className={style.conteinerButtons2}>
-          <button className={style.button} onClick={handleLogOut}>
-            Log Out
+        <button className={style.button} onClick={handleLogOut}>
+          <FontAwesomeIcon icon={faRightFromBracket} className={style.close}/>
           </button>
 
           <NavLink to="/about">

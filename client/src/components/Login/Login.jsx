@@ -5,7 +5,7 @@ import game from "../../assets/game4.png";
 //import Loading from "../Loading/Loading";
 
 const Login = ({ login }) => {
-  console.log({ login });
+  //console.log({ login });
 
   const [userData, setUserData] = useState({
     email: "",

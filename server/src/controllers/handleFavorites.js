@@ -1,4 +1,5 @@
 let myFavorites = [];
+console.log(myFavorites);
 
 const postFav = (req, res) => {
 
@@ -15,6 +16,8 @@ const deleteFav = (req, res) => {
   const { id } = req.params;
 
   const myFavorites1 = myFavorites.filter((fav) => fav.id != +id);
+
+  console.log(myFavorites);
 
   myFavorites = [...myFavorites1]
 

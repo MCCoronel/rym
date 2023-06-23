@@ -3,31 +3,7 @@
   src: url(../../assets/sui\ generis\ rg.ttf);
 }
 
-.content {
-  overflow: hidden;
 
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.content::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(-45deg, #12ece5 0%, #ffb70f 100%);
-  z-index: -1;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.content:hover::before {
-  height: 100%;
-}
-
-.content:hover {
-  box-shadow: none;
-}
 
 .welcome {
   font-family: "sui generis";
