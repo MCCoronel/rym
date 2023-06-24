@@ -4,31 +4,13 @@
 }
 
 
-
-.welcome {
-  font-family: "sui generis";
-  letter-spacing: 1px;
-  margin-right: 10px;
-  margin-top: 10px;
-  height: fit-content;
-  color: #fff;
-  padding: 5px 100px 5px 100px;
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  border-radius: 5px;
-  border: 5px solid white;
-  box-shadow: 1px 1px 11px 10px rgba(244, 244, 170, 0.66);
-  -webkit-box-shadow: 1px 1px 11px 10px rgba(244, 244, 170, 0.66);
-  -moz-box-shadow: 1px 1px 11px 10px rgba(244, 244, 170, 0.66);
-  background-color: rgba(2, 217, 255, 0.438);
-}
-
-.welcome:hover {
-  box-shadow: 1px 2px 22px 15px rgba(244, 244, 170, 0.66);
-  -webkit-box-shadow: 1px 2px 22px 15px rgba(244, 244, 170, 0.66);
-  -moz-box-shadow: 1px 2px 22px 15px rgba(244, 244, 170, 0.66);
+@keyframes subir {
+  0%{
+      transform: translateY(5px);
+  }
+  100%{
+      transform: translateY(-5px);
+  }
 }
 
 .container {
@@ -60,16 +42,17 @@
 }
 
 .image {
-  width: 350px; /* Ajusta el ancho deseado */
+  display: flex;
+  width: 400px; /* Ajusta el ancho deseado */
   height: auto; /* La altura se ajusta proporcionalmente */
   border-radius: 20px;
   position: relative;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   display: inline-block;
-  border-radius: 22px;
-  margin-right: 1em;
-  border-radius: 22px;
-  background: linear-gradient(145deg, #43ebee, #39c6c8);
+  border-radius: 200px;
+  margin: 2em;
   box-shadow: 5px 5px 5px #3a3c3c, -2px -2px 9px #058383;
 }
 
@@ -80,26 +63,34 @@
 }
 
 .description {
+  display: flex;
+  flex-direction: row;  
   font-family: "sui generis";
   font-size: medium;
   border: 5px solid white;
-  height: 100%; /* Establece la altura al 100% */
-  border-radius: 7%;
-  background-color: rgba(245, 245, 220, 0.863);
+  height: 90%; /* Establece la altura al 100% */
+  border-radius: 2%;
+  backdrop-filter: blur(4px);
+ 
 }
 
-.description:hover {
-  box-shadow: 1px 2px 22px 15px rgba(244, 244, 170, 0.66);
-  -webkit-box-shadow: 1px 2px 22px 15px rgba(244, 244, 170, 0.66);
-  -moz-box-shadow: 1px 2px 22px 15px rgba(244, 244, 170, 0.66);
+.texto{
+  width: 100%;
+  height: 50%;
+  margin-top: 3%;
+  margin-right: 0.5%;
+  
+ 
 }
+
+
 
 .redes{
   margin-right:-1em;
 }
 
 .instagram {
-  color: rgba(41, 41, 46, 0.652);
+  color: rgba(41, 41, 46, 0.959);
 }
 
 .instagram:hover {
@@ -107,7 +98,7 @@
 }
 
 .linkedin {
-  color: rgba(41, 41, 46, 0.652);
+  color: rgba(41, 41, 46, 0.959);
 }
 
 .linkedin:hover {
@@ -115,7 +106,7 @@
 }
 
 .github {
-  color: rgba(41, 41, 46, 0.652);
+  color: rgba(41, 41, 46, 0.959);
 }
 
 .github:hover {

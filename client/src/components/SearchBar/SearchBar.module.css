@@ -21,8 +21,8 @@
 
 .SearchButton {
   font-family: "sui generis";
-  margin-left: 1px; /* Modifica el margen izquierdo según tus necesidades */
-  margin-right: 5px;
+  font-size: 120%;
+  margin-right: 20px;
   min-width: 130px;
   height: 40px;
   color: #fff;
@@ -37,15 +37,13 @@
   border: none;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  background-color: rgb(21, 189, 189);
+  background-color: rgba(21, 189, 189, 0);
   z-index: 1;
 }
-
 .SearchButton:hover:after {
   width: 100%;
   left: 0;
 }
-
 .SearchButton:after {
   border-radius: 5px;
   position: absolute;
@@ -57,10 +55,9 @@
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  background-color: #80ed99;
+  background-color: #08f8bc;
   right: 0;
 }
-
 .SearchButton:active {
   top: 2px;
 }

@@ -29,8 +29,8 @@ const NavHome = ({setAccess }) => {
             <button className={style.button}>About me</button>
           </NavLink>
 
-          <NavLink to="/home">
-            <button className={style.button}>Home</button>
+          <NavLink to="/characters">
+            <button className={style.button}>Game</button>
           </NavLink>
         </div>
       </div>

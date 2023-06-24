@@ -11,7 +11,8 @@
   margin: 3%;
   width: 50%;
   height: 60%;
-  background: #0cc2cf95;
+  border: solid 2px white;
+  backdrop-filter: blur(5px);
   /* background: linear-gradient(0deg,#043c61 30%, #11a2f6 80%);
     background: -webkit-linear-gradient(0deg,#043c61 30%, #11a2f6 80%);
     background: -moz-linear-gradient(0deg,#043c61 30%, #11a2f6 80%); */
