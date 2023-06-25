@@ -26,14 +26,7 @@ const Home = () => {
 
                         <div>
                             <p className={style.intro}>
-                                Muy bien, Morty, déjame explicarte cómo funcionaría ese juego de
-                                cartas que has imaginado. Prepárate para una aventura
-                                interdimensional de estrategia y diversión. En este juego,
-                                llamémoslo "Interdimensional Clash", los jugadores tendrán la
-                                oportunidad de elegir sus personajes favoritos de una selección de
-                                826 opciones. Estos personajes podrían ser desde superhéroes y
-                                villanos hasta criaturas mágicas y seres de otros mundos. ¡Las
-                                posibilidades son infinitas, Morty!
+                                All right, Morty, let me explain to you how that card game you’ve imagined would work. Get ready for an interdimensional adventure of strategy and fun. In this game, let’s call it "Interdimensional Clash", players will have the opportunity to choose their favorite characters from a selection of 826 options. These characters could range from superheroes and villains to magical creatures and otherworldly beings. The possibilities are endless, Morty!
                             </p>
                         </div>
 

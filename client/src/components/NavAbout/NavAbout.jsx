@@ -2,7 +2,7 @@
 import { NavLink } from "react-router-dom";
 import style from "./NavAbout.module.css";
 import logo from "../../assets/Rick_and_Morty.svg.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , useLocation} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRightFromBracket
@@ -10,7 +10,7 @@ import {
 
 const NavAbout = ({ setAccess }) => {
 
-
+  const location = useLocation();
   const navigate = useNavigate();
 
 
@@ -18,8 +18,23 @@ const NavAbout = ({ setAccess }) => {
     setAccess(false);
     navigate("/");
   };
+ 
+  let h3Text = "";
+  switch (location.pathname) {
+    
+    case "/about":
+      h3Text =
+        "Are you looking for the great creator of this page? Don't worry, because you found it! She is the mastermind behind all of this. Rick Sanchez";
+      break;
+    case "/favorites":
+      h3Text =
+        "Burp! These are the chosen ones! This is where you can find your favorite characters from all the universes, Wubba lubba dub dub!";
+      break;
 
-
+    default:
+      h3Text =
+        "Hey hey! Here we are in the detail of a character! Wow, that is amazing! Get ready to immerse yourself in the life of this extraordinary being and discover all the fascinating details about him";
+  }
 
   return (
     <nav className={style.navBar}>
@@ -51,7 +66,8 @@ const NavAbout = ({ setAccess }) => {
           <img src={logo} alt="logo" className={style.logo}></img>
         </div>
 
-        <h3 className={style.h3}>Hey hey! Here we are in the detail of a character! Wow, that is amazing! Get ready to immerse yourself in the life of this extraordinary being and discover all the fascinating details about him.</h3>
+        <h3 className={style.h3}>{h3Text}</h3>
+
       </div>
     </nav>
   );

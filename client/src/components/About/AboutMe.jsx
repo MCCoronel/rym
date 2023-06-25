@@ -41,7 +41,7 @@ const AboutMe = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin size={100} className={style.linkedin} />
+            <FaLinkedin size={70} className={style.linkedin} />
           </a>
 
           <a
@@ -49,14 +49,14 @@ const AboutMe = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram size={100} className={style.instagram} />
+            <FaInstagram size={70} className={style.instagram} />
           </a>
           <a
             href="https://github.com/MCCoronel/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub size={100} margin-right={50} className={style.github} />
+            <FaGithub size={70} margin-right={50} className={style.github} />
           </a>
         </div>
           </div>

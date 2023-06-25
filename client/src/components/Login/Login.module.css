@@ -170,11 +170,11 @@
   outline: none;
   transition: 0.4s ease-in-out;
   background-image: linear-gradient(163deg, #00ff2a 0%, #520675 100%);
-  color: rgb(0, 0, 0);
+  color: #1b262c;
 }
 
 .button:hover {
-  background-image: linear-gradient(163deg, #ec03cd 0%, #ea7c06 100%);
+  background-image: linear-gradient(163deg, #7907ad 0%, #00ff2a 100%);
   color: rgb(0, 255, 200);
 }
 
