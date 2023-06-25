@@ -57,11 +57,11 @@
 .h3 {
   font-family: "sui generis";
   font-size: 15px;
-  text-shadow: 1px -1px 21px rgba(194, 228, 22, 0.98);
+  text-shadow: 1px -1px 21px rgba(247, 248, 244, 0.98);
 }
 
 .h3:hover {
-  text-shadow: 1px -1px 21px rgb(3, 245, 27);
+  text-shadow: 1px -1px 21px rgb(3, 237, 245);
 }
 
 .logo {

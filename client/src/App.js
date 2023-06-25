@@ -126,11 +126,12 @@ function App() {
   const{id}= useParams();
   console.log(id);
   const location = useLocation();
-  const showNav = location.pathname !== "/" && location.pathname !== "/home" && location.pathname !== "/about" && location.pathname !== `/detail/${id}`;
+  const showNav = location.pathname !== "/" && location.pathname !== "/favorites" && location.pathname !== "/home" && location.pathname !== "/about" && location.pathname !== `/detail/${id}`;
   const showNavHome = location.pathname === "/home"
   const showNavDetail = location.pathname === `/detail/${id}`;
   console.log(location.pathname);
   const showNavAbout = location.pathname === "/about";
+  const showNavFavorite = location.pathname === "/favorites";
 
   //Pasé la función login como una prop llamada login al componente Login en la ruta "/". Esto permitirá que el componente Login llame a la función login cuando el usuario intente iniciar sesión.
 
@@ -170,6 +171,13 @@ function App() {
 {showNavAbout && (
             <NavAbout
               className={style.BarraAgregar}
+              setAccess={setAccess}
+            />
+          )}
+          {showNavFavorite && (
+            <NavAbout
+              className={style.BarraAgregar}
+              onSearch={onSearch}
               setAccess={setAccess}
             />
           )}

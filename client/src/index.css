@@ -1,6 +1,6 @@
 body {
-  background-image: url(../src/assets/laboratorio1.webp);
-  /*background-image: url(../src/assets/laboratorio2.jpg);*/
+  /* background-image: url(../src/assets/laboratorio1.webp); */
+  background-image: url("../../client/src/assets/login6.jpg");
   box-shadow: 0px 142px 48px -6px rgba(0,0,0,0.66) inset;
 -webkit-box-shadow: 0px 142px 48px -6px rgba(0,0,0,0.66) inset;
 -moz-box-shadow: 0px 142px 48px -6px rgba(0,0,0,0.66) inset;
