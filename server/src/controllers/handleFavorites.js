@@ -1,4 +1,5 @@
 let myFavorites = [];
+
 console.log(myFavorites);
 
 const postFav = (req, res) => {
