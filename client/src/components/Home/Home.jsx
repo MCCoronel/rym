@@ -7,7 +7,8 @@ import imgSection2 from "../../assets/section21.webp";
 import imgSection3 from "../../assets/section31.jpg";
 import imgSection4 from "../../assets/section41.jpg";
 import imgSection5 from "../../assets/section51.png";
-import imgFooter from "../../assets/Rick-And-Morty-Background-PNG.png"
+import imgFooter from "../../assets/Rick-And-Morty-Background-PNG.png";
+import CountUp from 'react-countup';
 
 
 
@@ -28,6 +29,10 @@ const Home = () => {
                             <p className={style.intro}>
                                 All right, Morty, let me explain to you how that card game you’ve imagined would work. Get ready for an interdimensional adventure of strategy and fun. In this game, let’s call it "Interdimensional Clash", players will have the opportunity to choose their favorite characters from a selection of 826 options. These characters could range from superheroes and villains to magical creatures and otherworldly beings. The possibilities are endless, Morty!
                             </p>
+                            <div className={style.Contador}>
+                                <span className={style.count}><h2><CountUp start={0} end={826} duration={2} /></h2><p>Characters</p></span>
+                                <span><p>INFINITAS </p><p>DIMENSIONES</p></span>
+                            </div>
                         </div>
 
                         {/* <Link to='/characters'>
@@ -42,16 +47,16 @@ const Home = () => {
 
                         {/* <div className={style.ContainerVideo}>
                         <video
-                            src={video}
+                        src={video}
                             autoPlay
                             muted
                             controls
                             loop
                             className={style.videoHome}
-                        ></video>
-                  
-                       
-                    </div> */}
+                            ></video>
+                            
+                            
+                        </div> */}
 
                         <section className={style.section}>
 
@@ -69,10 +74,10 @@ const Home = () => {
 
                 </div>
                 <Link to="/characters">
-                <button data-text="Awesome" className={style.button}>
-                    <span className={style.actualText}>&nbsp;PLAY&nbsp;</span>
-                    <span className={style.hoverText} aria-hidden="true">&nbsp;PLAY&nbsp;</span>
-                </button>
+                    <button data-text="Awesome" className={style.button}>
+                        <span className={style.actualText}>&nbsp;PLAY&nbsp;</span>
+                        <span className={style.hoverText} aria-hidden="true">&nbsp;PLAY&nbsp;</span>
+                    </button>
                 </Link>
                 <div className={style.footer}>
                     <span className={style.span}>
