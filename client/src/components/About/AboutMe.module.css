@@ -4,6 +4,34 @@
 }
 
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2%;
+  width: 50%;
+  height: 60%;
+  border: solid 2px white;
+  backdrop-filter: blur(5px);
+  /* background: linear-gradient(0deg,#043c61 30%, #11a2f6 80%);
+    background: -webkit-linear-gradient(0deg,#043c61 30%, #11a2f6 80%);
+    background: -moz-linear-gradient(0deg,#043c61 30%, #11a2f6 80%); */
+
+  border-radius: 20px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+
+  box-shadow: 10px 10px 0px -2px rgba(241, 236, 236, 0.701);
+  -webkit-caja-sombra: 10px 10px 0px -2px rgba(245, 240, 240, 0.59);
+  -moz-caja-sombra: 10px 10px 0px -2px rgba(247, 239, 239, 0.59);
+
+  padding-left: 1em;
+  padding-right: 1em;
+  transition: all 400ms ease;  /*Esta línea establece una transición animada para todas las propiedades CSS. El efecto de transición tendrá una duración de 400 milisegundos y se aplicará una función de temporización "ease" (suave) para suavizar la animación.*/
+  animation: subir 2s infinite alternate ease-in-out; /*Esta línea establece una animación llamada "subir" que se aplicará al elemento. La animación tiene una duración de 2 segundos. La palabra clave "infinite" indica que la animación se repetirá infinitamente. La palabra clave "alternate" especifica que la animación se invertirá en cada ciclo, es decir, el elemento se moverá hacia arriba y luego hacia abajo. La función de temporización "ease-in-out" se utiliza para suavizar la aceleración y desaceleración de la animación*/
+}
+
 @keyframes subir {
   0%{
       transform: translateY(5px);
@@ -13,74 +41,45 @@
   }
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 10px auto; /* Agrega 'auto' para centrar horizontalmente */
-  width: 90%;
-}
-
-.logos {
-  width: 95px;
-  height: auto;
-}
-
-.logoJS {
-  width: 180px;
-  height: auto;
-}
-
-.logoCSS {
-  width: 69px;
-  height: auto;
-}
-
-.logoRedux {
-  width: 120px;
-  height: auto;
-}
-
-.image {
-  display: flex;
-  width: 350px; /* Ajusta el ancho deseado */
-  height: auto; /* La altura se ajusta proporcionalmente */
-  border:5px solid white;
-  position: relative;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  display: inline-block;
-  border-radius: 200px;
-  margin: 2em;
-  box-shadow: 5px 5px 5px #3a3c3c, -2px -2px 9px #058383;
-}
-
-
-.description {
-  display: flex;
-  flex-direction: row;  
+.name {
   font-family: "sui generis";
-  font-size: medium;
-  border: 5px solid white;
-  height: 90%; /* Establece la altura al 100% */
-  border-radius: 2%;
-  backdrop-filter: blur(4px);
- 
+  font-size: 250%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
-.texto{
-  width: 100%;
-  height: 50%;
-  margin-top: 3%;
-  margin-right: 0.5%;
-  color:rgb(255, 255, 255);
- 
+.detail {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  /*z-index: -1;*/
+
+  margin-bottom: 5%;
 }
 
 
 
+.imagen {
+  display: block;
+  width: 40%;
+  height: auto;
+  border-radius: 300px;
+}
 
+.atributes {
+  text-align: left;
+  font-family: "sui generis";
+  font-size: larger;
+  font-style: oblique;
+  margin-left: -1em;
+  margin-top: 1em;
+}
+
+
+.redes{
+ 
+  margin-top: -5%
+}
 
 .instagram {
   color: rgba(250, 250, 253, 0.959);
