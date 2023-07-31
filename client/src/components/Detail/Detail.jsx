@@ -33,7 +33,7 @@ const Detail = () => {
           window.alert("No hay personajes con ese ID");
         }
       })
-      .catch((error) => {
+      .catch((error) => { 
         console.log(error);
         window.alert("Error al obtener los datos del personaje");
       });
